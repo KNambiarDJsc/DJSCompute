@@ -1,0 +1,113 @@
+Task 1:
+Problem 1:
+Code:
+
+import math
+import os
+import random
+import re
+import sys
+
+def is_weird(n):
+    if n%2 == 1 :
+        print('weird')
+    elif n % 2 == 0 and 2 <= n <= 5:
+        print("Not Weird")
+    elif n % 2 == 0 and 6 <= n <= 20:
+        print("Weird")
+    elif n % 2 == 0 and n > 20:
+        print("Not Weird")
+
+if __name__ == '__main__':
+    n = int(input('Enter an integer'))
+    is_weird(n)
+
+Problem 2:
+
+def print_squares(n):
+    for i in range(n):
+        print(i*i)
+
+def main():
+    num = int(input("Enter an integer: "))
+    print_squares(num)
+
+if __name__ == "__main__":
+    main()
+
+Problem 3:
+
+def is_leap(year):
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                return True
+            else:
+                return False
+        else:
+            return True
+    else:
+        return False
+
+def main():
+    year = int(input("Enter a year: "))
+    result = is_leap(year)
+    print(result)
+
+if __name__ == "__main__":
+    main()
+
+                
+Problem 4:
+
+if __name__ == '__main__':
+    N = int(input())
+    lst=[]
+    for i in range(N):
+        cmd=input().split()             #str converted to list  [remove,6]
+        if cmd[0]=='insert':                                           #cmd 0,1
+            lst.insert(int(cmd[1]),int(cmd[2]))
+        elif cmd[0]=='print':
+            print(lst)
+        elif cmd[0]=='remove':
+            lst.remove(int(cmd[1])) 
+        elif cmd[0]=='append':
+            lst.append(int(cmd[1]))
+        elif cmd[0]=='sort':
+            lst.sort()
+        elif cmd[0]=='pop':
+            lst.pop()
+        else:
+            lst.reverse()
+
+Problem 5 :
+import numpy as np
+
+def main():
+   
+    input_numbers = input().split()
+
+
+    numbers_list = [float(x) for x in input_numbers]
+
+    
+    reversed_array = np.array(numbers_list)[::-1]
+
+   
+    for num in reversed_array:
+        print(num)
+
+if __name__ == "__main__":
+    main()
+
+Problem 6:
+cube = lambda x: # complete the lambda function 
+
+def fibonacci(n):
+    list_1 = [0,1]
+    while(len(list_1)<n):
+     next_fibo = fibonacci(-1)+fibonacci(-2)
+     list_1.append(next_fibo)
+    return list_1
+
+if __name__ == '__main__':
